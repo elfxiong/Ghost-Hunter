@@ -1,3 +1,0 @@
-INDEX VERSION 1.126+C:\Users\dl6yg\Documents\Ghost Hunter\Ghost-Hunter\workspace\.metadata\.plugins\org.eclipse.jdt.core
-2381561200.index
-1625798335.index
