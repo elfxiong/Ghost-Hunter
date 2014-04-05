@@ -1,0 +1,2 @@
+INDEX VERSION 1.126+D:\vagrant\git_repo\Ghost-Hunter\workspace\.metadata\.plugins\org.eclipse.jdt.core
+611044998.index
