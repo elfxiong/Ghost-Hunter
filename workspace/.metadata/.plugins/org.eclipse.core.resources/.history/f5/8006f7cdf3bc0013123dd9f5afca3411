@@ -1,0 +1,52 @@
+package edu.virginia.cs2110.dqxy;
+
+import java.io.File;
+
+import android.content.Context;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.Picture;
+import android.media.Image;
+import android.util.AttributeSet;
+import android.view.View;
+
+public class MapView extends View {
+
+	private Paint paint;
+	
+	public MapView(Context context) {
+		super(context);
+		this.init();
+	}
+
+	public MapView(Context context, AttributeSet attrs) {
+		super(context, attrs);
+		this.init();
+	}
+
+	public MapView(Context context, AttributeSet attrs, int defStyleAttr) {
+		super(context, attrs, defStyleAttr);
+		this.init();
+	}
+
+	
+	private void init(){
+		Picture spriteSheet = null;
+		spriteSheet = Image.read(new File(filename));
+		try {
+			spriteSheet = Image.read(new File("human."));
+		} catch (Exception e) {
+			System.err.println("Cannot load images!");
+		}
+	}
+	
+	@Override
+	public void onDraw(Canvas c) {
+		super.onDraw(c);//clear all the image
+		int h = this.getMeasuredHeight();
+		int w = this.getMeasuredWidth();
+		c.drawPicture(picture);
+		
+		
+	}
+}
