@@ -1,0 +1,66 @@
+package edu.virginia.cs2110.dqxy;
+
+import android.os.AsyncTask;
+
+public class Changer extends AsyncTask<MapView, MapView, Double> {
+
+	// Local Variable
+	MapView theView;
+
+	@Override
+	// Enables the circles to "move" (get re-created) with 1 sec intervals
+	protected Double doInBackground(MapView... params) {
+		while (!this.isCancelled()) { // while not cancelled
+			this.publishProgress(params);
+			try {
+				Thread.sleep(100); // 1sec // sleep (wait) one second
+			} catch (InterruptedException e) {
+
+			}
+
+			move(params);
+		}
+		return 0.0;
+	}
+
+	private void move(MapView... params) {
+		float v = 5;
+		MapView map1 = params[0];
+		Human human = map1.getHuman();
+		if (human.getX() > human.getX_()) {
+			human.setX(human.getX() - v);
+		} else if (human.getX() < human.getX_()) {
+			human.setX(human.getX() + v);
+		}
+		if (human.getY() > human.getY_()) {
+			human.setY(human.getY() - v);
+		} else if (human.getY() < human.getY_()) {
+			human.setY(human.getY() + v);
+		}
+		
+	}
+
+	@Override
+	protected void onProgressUpdate(MapView... params) {
+		for (MapView cv : params) {
+			cv.invalidate(); // re-draw (delete current and replace)
+								// current image is no longer valid
+		}
+	}
+
+	@Override
+	protected void onPostExecute(Double result) { // param based on return type
+
+	}
+
+	@Override
+	protected void onPreExecute() {
+
+	}
+
+	@Override
+	protected void onCancelled() {
+
+	}
+
+}

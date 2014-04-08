@@ -1,0 +1,9 @@
+package edu.virginia.cs2110.dqxy;
+
+public class Human {
+
+	public Human() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

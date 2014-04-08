@@ -1,0 +1,22 @@
+{
+  "D:\\vagrant\\git_repo\\Ghost-Hunter\\workspace\\GhostHunter\\src": {
+    "location": "D:\\vagrant\\git_repo\\Ghost-Hunter\\workspace\\GhostHunter\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027D:\\vagrant\\git_repo\\Ghost-Hunter\\workspace\\GhostHunter\\src\u0027. Skipped."
+  },
+  "D:\\vagrant\\git_repo\\Ghost-Hunter\\workspace\\GhostHunter\\gen": {
+    "location": "D:\\vagrant\\git_repo\\Ghost-Hunter\\workspace\\GhostHunter\\gen",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027D:\\vagrant\\git_repo\\Ghost-Hunter\\workspace\\GhostHunter\\gen\u0027. Skipped."
+  },
+  "C:\\Program Files (x86)\\Android\\android-sdk\\platforms\\android-19\\android.jar": {
+    "location": "C:\\Program Files (x86)\\Android\\android-sdk\\platforms\\android-19\\android.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027C:\\Program Files (x86)\\Android\\android-sdk\\platforms\\android-19\\android.jar\u0027. Neither fingerprint \u00277f972d2aa0fcb741fc84a9a10c98555f6f431a7a\u0027 nor symbolic name \u0027android\u0027 are known."
+  },
+  "D:\\vagrant\\git_repo\\Ghost-Hunter\\workspace\\Ghost Hunter\\src": {
+    "location": "D:\\vagrant\\git_repo\\Ghost-Hunter\\workspace\\Ghost Hunter\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027D:\\vagrant\\git_repo\\Ghost-Hunter\\workspace\\Ghost Hunter\\src\u0027. Skipped."
+  }
+}

@@ -1,0 +1,32 @@
+package edu.virginia.cs2110.dqxy;
+
+import java.util.ArrayList;
+
+import android.graphics.Rect;
+
+
+public class Human {
+
+	private float x;
+	private float y;
+	private float width=50;
+	private float height=80;
+	private float x_;
+	private float y_;
+	private float v = 40;
+	private Rect hitbox = new Rect();
+	private boolean intersectwwall;
+	private boolean intersectwzombie;
+	private ArrayList<Rect> oblist;
+
+	public Human(int x, int y, ArrayList<Rect> oblist) {
+		super();
+		this.x = x;
+		hitbox.left = (int) (x + 0.5);
+		this.y = y;
+		hitbox.top = (int) (y + 0.5);
+		this.oblist = oblist;
+	}
+
+	
+}
