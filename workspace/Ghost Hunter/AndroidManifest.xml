@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="edu.virginia.cs2110.dqxy.Popup"
+            android:name="edu.virginia.cs2110.dqxy.GameStart"
             android:label="@string/title_activity_popup" >
         </activity>           
     </application>

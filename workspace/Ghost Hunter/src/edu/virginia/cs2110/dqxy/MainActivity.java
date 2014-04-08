@@ -25,7 +25,7 @@ public class MainActivity extends Activity {
 	
     public void topButtonClicked(View button) {
     	// Create an intent to associate button clicked with Popup class
-    	Intent intent = new Intent (this, Popup.class);
+    	Intent intent = new Intent (this, GameStart.class);
     	this.startActivity(intent);
     	Log.d("2110", "The Button was clicked"); //d=debug message.   format: tag + message
     }	
