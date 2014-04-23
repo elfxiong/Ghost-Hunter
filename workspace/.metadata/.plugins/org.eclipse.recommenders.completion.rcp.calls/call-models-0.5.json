@@ -18,5 +18,10 @@
     "location": "D:\\vagrant\\git_repo\\Ghost-Hunter\\workspace\\Ghost Hunter\\src",
     "status": "UNRESOLVED",
     "error": "No class path info available for \u0027D:\\vagrant\\git_repo\\Ghost-Hunter\\workspace\\Ghost Hunter\\src\u0027. Skipped."
+  },
+  "D:\\vagrant\\git_repo\\Ghost-Hunter\\workspace\\Ghost Hunter\\gen": {
+    "location": "D:\\vagrant\\git_repo\\Ghost-Hunter\\workspace\\Ghost Hunter\\gen",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027D:\\vagrant\\git_repo\\Ghost-Hunter\\workspace\\Ghost Hunter\\gen\u0027. Skipped."
   }
 }

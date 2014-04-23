@@ -1,28 +1,41 @@
 [
   {
-    "symbolicName": "android-support-v4",
+    "symbolicName": "maps",
     "version": {
       "major": -1,
       "minor": -1,
       "micro": -1,
       "qualifier": ""
     },
-    "jarFileFingerprint": "db0f122c99ef9f90dbab3fada6d191f2880cbb8e",
-    "jarFileModificationDate": "2014-04-05T14:05:02.933-04:00",
-    "location": "D:\\vagrant\\git_repo\\Ghost-Hunter\\workspace\\GhostHunter\\libs\\android-support-v4.jar",
+    "jarFileFingerprint": "5242cbe3798c55a8c95addaf7e54cf52a2ec8468",
+    "jarFileModificationDate": "2014-04-08T12:59:14.597-04:00",
+    "location": "C:\\Program Files (x86)\\Android\\android-sdk\\add-ons\\addon-google_apis-google-19-1\\libs\\maps.jar",
     "javaRuntime": false
   },
   {
-    "symbolicName": "android-support-v4",
+    "symbolicName": "usb",
     "version": {
       "major": -1,
       "minor": -1,
       "micro": -1,
       "qualifier": ""
     },
-    "jarFileFingerprint": "4a6be13368bb64c5a0b0460632d228a1a915f58f",
-    "jarFileModificationDate": "2014-03-17T21:38:44-04:00",
-    "location": "G:\\android\\Circle2\\Circle2\\libs\\android-support-v4.jar",
+    "jarFileFingerprint": "371c7760ab73d06686e5b8be2a877d1b2f50d0c4",
+    "jarFileModificationDate": "2014-04-08T12:58:51.683-04:00",
+    "location": "C:\\Program Files (x86)\\Android\\android-sdk\\add-ons\\addon-google_apis-google-19-1\\libs\\usb.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "effects",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "8bb0abce1c01b4a78f4d7e52df57acc88e3b11ac",
+    "jarFileModificationDate": "2014-04-08T12:59:14.741-04:00",
+    "location": "C:\\Program Files (x86)\\Android\\android-sdk\\add-ons\\addon-google_apis-google-19-1\\libs\\effects.jar",
     "javaRuntime": false
   },
   {
@@ -49,19 +62,6 @@
     "jarFileFingerprint": "4a6be13368bb64c5a0b0460632d228a1a915f58f",
     "jarFileModificationDate": "2014-03-17T21:38:44-04:00",
     "location": "D:\\vagrant\\git_repo\\Ghost-Hunter\\workspace\\Ghost Hunter\\libs\\android-support-v4.jar",
-    "javaRuntime": false
-  },
-  {
-    "symbolicName": "android-support-v4",
-    "version": {
-      "major": -1,
-      "minor": -1,
-      "micro": -1,
-      "qualifier": ""
-    },
-    "jarFileFingerprint": "db0f122c99ef9f90dbab3fada6d191f2880cbb8e",
-    "jarFileModificationDate": "2014-04-05T14:05:02.933-04:00",
-    "location": "D:\\vagrant\\git_repo\\Ghost-Hunter\\workspace\\gh1\\libs\\android-support-v4.jar",
     "javaRuntime": false
   }
 ]

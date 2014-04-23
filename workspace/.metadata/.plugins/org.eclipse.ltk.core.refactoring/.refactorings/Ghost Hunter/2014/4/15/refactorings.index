@@ -1,3 +1,30 @@
 1396746883303	Rename type 'ChangeCircles'
 1396746933049	Rename type 'UpdatePositions'
 1396750732730	Delete element
+1396914075972	Rename type 'Popup'
+1396914108481	Rename type 'Screen'
+1396917468807	Rename type 'Changer'
+1396921940874	Copy file
+1396924532965	Rename type 'WalkerThread'
+1396930318427	Rename type 'ThreadPool'
+1396932071447	Delete element
+1396933773147	Rename type 'Walker'
+1396933794403	Rename type 'Floater'
+1396933830379	Rename type 'Float1'
+1396933837561	Rename type 'Walk1'
+1396968326942	Move compilation unit
+1396968342263	Delete element
+1396968351081	Delete element
+1396977580942	Rename resource 'google_eyed_ghost_icon_blue.png'
+1396977603070	Rename resource 'google_eyed_ghost_icon_green.png'
+1396977618369	Rename resource 'blue_ghost.png'
+1396977632492	Rename resource 'green_ghost.png'
+1396977686212	Rename resource 'google_eyed_ghost_icon_red.png'
+1396977699152	Rename resource 'google_eyed_ghost_icon_yellow.png'
+1396977724032	Rename resource 'ic_launcher.png'
+1396977744448	Rename resource 'ghost_w_lantern.png'
+1396978308950	Rename resource 'ic_launcher.png'
+1397248503084	Rename field 'paint'
+1397259508078	Rename field 'map'
+1397263343150	Rename local variable 'savedInstanceState'
+1397271130013	Rename local variable 'savedInstanceState'
