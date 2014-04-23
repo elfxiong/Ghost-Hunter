@@ -17,22 +17,24 @@ public class BackgroundMode extends Activity {
 	SharedPreferences sharedPref;
 	TextView sBomb_txt;
 	LinearLayout layout;
+	int regularBombPrize = 1;
+	int superBombPrize = 10;
+
 	@Override
 	protected void onCreate(Bundle savedd) {
 		super.onCreate(savedd);
 		layout = new LinearLayout(this);
 		sharedPref = getSharedPreferences(getString(R.string.save_slot_1),
 				Context.MODE_PRIVATE);
-		
+
 		resumeBtn();
 		regularBomb();
-//		superBomb();
-		
+		// superBomb();
+		// TODO layout.setBackgroundResource(R.drawable.);
 		layout.setOrientation(LinearLayout.VERTICAL);
 		layout.setGravity(Gravity.CENTER);
 		setContentView(layout);
 	}
-
 
 	private void resumeBtn() {
 		Button resumeBtn = new Button(this);
@@ -43,20 +45,32 @@ public class BackgroundMode extends Activity {
 				finish();
 			}
 		});
-		layout.addView(resumeBtn);		
+		layout.addView(resumeBtn);
 	}
 
 	private void regularBomb() {
 		Button rBomb_btn = new Button(this);
-		rBomb_btn.setText("Buy Bomb");
+		rBomb_btn.setText("Buy Bomb ($1)");
+		if (sharedPref.getInt("Money", 0) < 1) {
+			rBomb_btn.setEnabled(false);
+		} else {
+			rBomb_btn.setEnabled(true);
+		}
 		rBomb_btn.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				int money = sharedPref.getInt("Money", 0);
+				if (money < regularBombPrize) {
+					sBomb_txt.setText("You don't have enough money!");
+				}// I think it won't get to this line
+
 				sharedPref.getInt("RegularBomb", 0);
 				SharedPreferences.Editor editor = sharedPref.edit();
 				editor.putInt("RegularBomb",
 						sharedPref.getInt("RegularBomb", 0) + 1);
+				editor.putInt("Money", sharedPref.getInt("Money", 0)-regularBombPrize);
 				editor.commit();
+
 				sBomb_txt.setText("Regular Bomb: "
 						+ sharedPref.getInt("RegularBomb", 0));
 			}
@@ -68,28 +82,6 @@ public class BackgroundMode extends Activity {
 				+ sharedPref.getInt("RegularBomb", 0));
 		layout.addView(sBomb_txt);
 	}
+
 	
-
-	private void superBomb() {//TODO
-		Button sBomb_btn = new Button(this);
-		sBomb_btn.setText("Buy Bomb");
-		sBomb_btn.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				sharedPref.getInt("RegularBomb", 0);
-				SharedPreferences.Editor editor = sharedPref.edit();
-				editor.putInt("RegularBomb",
-						sharedPref.getInt("RegularBomb", 0) + 1);
-				editor.commit();
-				sBomb_txt.setText("Regular Bomb: "
-						+ sharedPref.getInt("RegularBomb", 0));
-			}
-		});
-		layout.addView(sBomb_btn);
-
-		sBomb_txt = new TextView(this);
-		sBomb_txt.setText("Regular Bomb: "
-				+ sharedPref.getInt("RegularBomb", 0));
-		layout.addView(sBomb_txt);
-	}
 }

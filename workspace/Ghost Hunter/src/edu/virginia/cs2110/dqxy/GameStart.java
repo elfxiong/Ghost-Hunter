@@ -28,59 +28,30 @@ public class GameStart extends Activity {
 	MapView currentMap;
 	boolean newGame;
 	ImageButton pauseButton;
-	Button kill;
+	Button killButton;
 	RelativeLayout ll;
 	static Object baton;
 	static int money;
 	static int score;
 
-	// MapView pastMap;
-	// MapView futureMap;
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		money = 0;
-		score = 0;
-		// pastMap = new MapView(this);
-		// futureMap = new MapView(this);
-
-		// currentMap = new MapView(this);
-		// refresher = new ScreenRefresher();
-		if (savedInstanceState == null) {
-			// postionUpdater = new MoveRunnable(currentMap);
-			// positionUpdateThread = new Thread(postionUpdater);
-			// positionUpdateThread.start(); // start in onResume() rather than
-			// // onCreate()
-			// // refresher.execute(currentMap);
-			// setContentView(currentMap);
-		} else {
-			// loadGameDataFromSavedInstanceState(savedInstanceState);
-		}
-
-		// if (savedInstanceState == null) {
-		// loadGameDataFromSharedPreferences(getPreferences(MODE_PRIVATE));
-		// } else {
-		//
-		// loadGameDataFromSavedInstanceState(savedInstanceState);
-		// }
-
+		
 		Log.d("GameStart", "Create");
 	}
 
 	@Override
 	protected void onResume() {
 		super.onResume();
-		this.baton = new Object();
-		// refresher.runnable.onResume(); // the method written by ourselves
+		GameStart.baton = new Object();
 		loadGameDataFromSharedPreferences(this.getSharedPreferences(
 				getString(R.string.save_slot_1), Context.MODE_PRIVATE));
 		postionUpdater = new MoveRunnable(currentMap);
 		positionUpdateThread = new Thread(postionUpdater);
-		positionUpdateThread.start(); // start in onResume() rather than
-										// onCreate()
-										// refresher.execute(currentMap);
+		positionUpdateThread.start(); 
+		
 		currentMap.setOnTouchListener(new MyOnTouchListener());
 		
 		ll = new RelativeLayout(this);
@@ -124,6 +95,10 @@ public class GameStart extends Activity {
 
 	private void loadGameDataFromSharedPreferences(SharedPreferences preferences) {
 		currentMap = new MapView(this);
+		
+		//stats
+		money = preferences.getInt("Money", 0);
+		score = preferences.getInt("Score", 0);
 
 		// set human
 		String[] humanInfo = preferences.getString("HumanInfo", "0,0").split(
@@ -168,6 +143,9 @@ public class GameStart extends Activity {
 		editor.putString("GhostInfo", currentMap.printGhostList());
 		editor.putString("HumanInfo", currentMap.getHuman().toString());
 		editor.putInt("RegularBomb", currentMap.getHuman().getBombRegular());
+		editor.putInt("SuperBomb", currentMap.getHuman().getBombSuper());
+		editor.putInt("Score", GameStart.score);
+		editor.putInt("Money", GameStart.money);
 
 		editor.commit();
 
@@ -209,23 +187,21 @@ public class GameStart extends Activity {
 		pauseButton.setX(width * 0.8F);
 		pauseButton.setY(height * 0.05F);
 
-		// pauseButton.setMaxHeight((int) (width*0.01F));
-		// pauseButton.setMaxWidth((int) (width*0.01F));
 		pauseButton.setBackgroundColor(Color.TRANSPARENT);
 		pauseButton.setImageBitmap(Bitmap.createScaledBitmap(
 				BitmapFactory.decodeResource(getResources(), R.drawable.pause),
-				(int) (width * 0.05), (int) (height * 0.05), true));
+				(int) (width * 0.1), (int) (width * 0.1), true));
 		pauseButton.setVisibility(View.VISIBLE);
 		pauseButton.setOnClickListener(new ClickToPause());
 
-		kill = new Button(this);
-		kill.setText("Kill");
-		kill.setX(100);
-		kill.setY(100);
+		killButton = new Button(this);
+		killButton.setText("Kill");
+		killButton.setX(100);
+		killButton.setY(100);
 		// btn.setVisibility(View.VISIBLE);
-		kill.setOnClickListener(new RegularKill());
+		killButton.setOnClickListener(new RegularKill());
 
-		ll.addView(kill);
+		ll.addView(killButton);
 		ll.addView(pauseButton);
 
 	}
@@ -233,12 +209,7 @@ public class GameStart extends Activity {
 	class ClickToPause implements OnClickListener {
 		@Override
 		public void onClick(View v) {
-			Log.d("Btm", "click");
-			// onPause();
 			Intent intent = new Intent(GameStart.this, BackgroundMode.class);
-			// Bundle stats = new Bundle();
-			// stats.putInt("RegularBomb",
-			// currentMap.getHuman().getBombRegular());
 			GameStart.this.startActivity(intent);
 		}
 
@@ -249,7 +220,6 @@ public class GameStart extends Activity {
 		public boolean onTouch(View v, MotionEvent me) {
 			float x = me.getX();
 			float y = me.getY();
-			// PointF p = new PointF(x,y);
 
 			currentMap.getHuman().setX_(x);
 			currentMap.getHuman().setY_(y);
@@ -260,14 +230,14 @@ public class GameStart extends Activity {
 
 	class RegularKill implements OnClickListener {
 		@Override
-		public void onClick(View arg0) {
+		public void onClick(View btn) {
 
 			synchronized (baton) {
 				try {
 					currentMap.RegularKill();
 					currentMap.getHuman().bombDecrease();
 				} catch (Exception e) {
-					;
+					e.printStackTrace();
 				}
 
 			}
