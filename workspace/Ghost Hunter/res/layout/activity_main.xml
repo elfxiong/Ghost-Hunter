@@ -15,7 +15,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="52dp"
-        android:text="Start the game!" />
+        android:text="@string/app_name"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/button1"
@@ -23,9 +24,37 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView1"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp"
-        android:text="Click ME" 
-        android:onClick="topButtonClicked"
-        />
+        android:layout_marginTop="57dp"
+        android:onClick="loadGame"
+        android:text="@string/load_game" />
+
+    <Button
+        android:id="@+id/Button01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_below="@+id/Button02"
+        android:layout_marginTop="17dp"
+        android:onClick="newGame"
+        android:text="@string/new_game" />
+
+    <Button
+        android:id="@+id/Button02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:onClick="SetDifficulty"
+        android:text="@string/set_difficulty" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="21dp"
+        android:layout_toRightOf="@+id/Button02"
+        android:src="@drawable/halloween_ghosts_duo_1" />
 
 </RelativeLayout>
+

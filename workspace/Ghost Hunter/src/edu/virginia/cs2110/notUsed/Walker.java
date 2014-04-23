@@ -1,12 +1,21 @@
-package edu.virginia.cs2110.dqxy;
+package edu.virginia.cs2110.notUsed;
 
+import java.io.Serializable;
+
+import edu.virginia.cs2110.dqxy.Human;
+import edu.virginia.cs2110.dqxy.MapView;
 import android.os.AsyncTask;
 import android.util.Log;
 
-public class Walker extends AsyncTask<MapView, MapView, Double> {
+public class Walker extends AsyncTask<MapView, MapView, Double> implements Serializable{
 
 	// Local Variable
 	// MapView theView;
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7002584197860915610L;
 
 	@Override
 	// Enables the circles to "move" (get re-created) with 1 sec intervals
@@ -18,6 +27,7 @@ public class Walker extends AsyncTask<MapView, MapView, Double> {
 			} catch (InterruptedException e) {
 			}
 			humanMove(params);
+//			Log.d("Walker", "human moving");
 		}
 		return 0.0;
 	}

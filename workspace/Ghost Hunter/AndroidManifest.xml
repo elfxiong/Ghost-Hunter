@@ -5,8 +5,8 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="11"
-        android:targetSdkVersion="18" />
+        android:minSdkVersion="18"
+        android:targetSdkVersion="19" />
 
     <application
         android:allowBackup="true"
@@ -15,7 +15,8 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="edu.virginia.cs2110.dqxy.MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,8 +25,12 @@
         </activity>
         <activity
             android:name="edu.virginia.cs2110.dqxy.GameStart"
-            android:label="@string/title_activity_popup" >
-        </activity>           
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="edu.virginia.cs2110.dqxy.BackgroundMode"
+            android:screenOrientation="portrait" >
+        </activity>
     </application>
 
 </manifest>
