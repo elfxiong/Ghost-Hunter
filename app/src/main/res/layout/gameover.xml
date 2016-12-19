@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/game_over"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/game_over_messgage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="Game Over\n\n\n"
+        android:textColor="#FF4500"
+        android:textSize="100dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/stat1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="  Score: "
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#F5F5F5"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/stat2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="  Money unspent: "
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#F5F5F5"
+        android:textSize="50sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/stat3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="  Numbers of kills: "
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#F5F5F5"
+        android:textSize="50sp"
+        android:textStyle="italic" />
+
+    <Button
+        android:id="@+id/restartBtn"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:onClick="finishGame"
+        android:text="Restart"
+        android:textColor="#F5F5F5"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

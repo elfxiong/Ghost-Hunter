@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg1"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/gamestats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:text="Game_Stats_is_here"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#D8BFD8"
+        android:textSize="40sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginTop="200dp"
+        android:layout_weight="1" >
+
+        <TextView
+            android:id="@+id/instruction_buy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:text="                    Click to buy"
+            android:textColor="#F5F5F5"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="PRICE"
+            android:textColor="#F5F5F5"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/supply"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="YOU HAVE"
+            android:textColor="#F5F5F5"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="100dp"
+        android:layout_weight="1" >
+
+        <ImageButton
+            android:id="@+id/shopBtn1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/shop_item1" />
+
+        <TextView
+            android:id="@+id/shopItm1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Fire Orb"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#F5F5F5" />
+
+        <TextView
+            android:id="@+id/shopPrz1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="            3"
+            android:textColor="#F5F5F5" />
+
+        <TextView
+            android:id="@+id/shopTxt1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="TextView"
+            android:textColor="#F5F5F5" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="100dp"
+        android:layout_weight="1" >
+
+        <ImageButton
+            android:id="@+id/shopBtn2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/shop_item2" />
+
+        <TextView
+            android:id="@+id/shopItm2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Chill Pill"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#F5F5F5" />
+
+        <TextView
+            android:id="@+id/shopPrz2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="           10"
+            android:textColor="#F5F5F5" />
+
+        <TextView
+            android:id="@+id/shopTxt2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="TextView"
+            android:textColor="#F5F5F5" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="100dp"
+        android:layout_weight="1" >
+
+        <ImageButton
+            android:id="@+id/shopBtn3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/shop_item3" />
+
+        <TextView
+            android:id="@+id/shopItm3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Disco Ball"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#F5F5F5" />
+
+        <TextView
+            android:id="@+id/shopPrz3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="       50"
+            android:textColor="#F5F5F5" />
+
+        <TextView
+            android:id="@+id/shopTxt3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="TextView"
+            android:textColor="#F5F5F5" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/mainMenu"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="160dp"
+            android:onClick="backToMain"
+            android:scaleType="fitCenter"
+            android:src="@drawable/backtomain" />
+
+        <ImageButton
+            android:id="@+id/resumeBtn"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:onClick="resumeGame"
+            android:scaleType="fitCenter"
+            android:src="@drawable/resume" />
+    </LinearLayout>
+
+</LinearLayout>

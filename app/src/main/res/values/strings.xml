@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">GhostHunter</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_popup">Popup</string>
+    <string name="click_me">Click Me</string>
+    <string name="set_difficulty">Set Difficulty</string>
+    <string name="load_game">Load Game</string>
+    <string name="save_slot_1">save_slot_1</string>
+    <string name="new_game">New Game</string>
+    <string name="resume">Resume</string>
+    <string name="no_enough_money">You don\'t have enough money!</string>
+    <string name="hp_full">You HP is full!</string>
+    
+    
+</resources>

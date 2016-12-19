@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center" 
+    android:background="@drawable/thunder">
+
+    <TextView
+        android:id="@+id/setDifficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Slide to set Difficulty\n"
+        android:textColor="#F5F5F5"
+        android:textSize="60dp"
+        android:textStyle="bold" 
+        android:layout_marginBottom="200dp"/>
+
+    <TextView
+        android:id="@+id/easy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textColor="#F5F5F5"
+        android:text="Easy                                  Hard"
+        />
+    
+    <SeekBar
+        android:id="@+id/seekBar1"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:max="121" />
+
+    <Button
+        android:id="@+id/loadGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="loadGame"
+        android:text="Load Game"
+        android:textColor="#F5F5F5"
+        android:textStyle="bold" />
+
+</LinearLayout>
