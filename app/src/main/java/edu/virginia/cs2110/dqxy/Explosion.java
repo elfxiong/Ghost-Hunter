@@ -6,106 +6,85 @@ import android.graphics.BitmapFactory;
 
 public class Explosion extends Coin {
 
-	private float x;
-	private float y;
-	private Bitmap explosion1;
-	private Bitmap explosion2;
-	private Bitmap explosion3;
-	private Bitmap explosion4;
-	private Bitmap explosion5;
-	private int explosionCount;
+    private float x;
+    private float y;
+    private Bitmap explosion1;
+    private Bitmap explosion2;
+    private Bitmap explosion3;
+    private Bitmap explosion4;
+    private Bitmap explosion5;
+    private int explosionCount;
 
-	public Explosion(float x, float y, Context mapView) {
-		super(x, y, mapView);
-	}
+    public Explosion(Context context) {
+        super(context);
+    }
 
-	public void init(float x, float y) {
-		this.x = x;
-		this.y = y;
-		explosionCount=0;
-		// Resources res = getResources();
-		this.explosion1 = BitmapFactory.decodeResource(getResources(),
-				R.drawable.explosion1);
-		this.explosion2 = BitmapFactory.decodeResource(getResources(),
-				R.drawable.explosion2);
-		this.explosion3 = BitmapFactory.decodeResource(getResources(),
-				R.drawable.explosion3);
-		this.explosion4 = BitmapFactory.decodeResource(getResources(),
-				R.drawable.explosion4);
-		this.explosion5 = BitmapFactory.decodeResource(getResources(),
-				R.drawable.explosion5);
-		
-	}
+    public Explosion(float x, float y, Context mapView) {
+        super(x, y, mapView);
+    }
 
-	public float getX() {
-		return x;
-	}
+    public void init(float x, float y) {
+        this.x = x;
+        this.y = y;
+        explosionCount = 0;
+        // Resources res = getResources();
+        this.explosion1 = BitmapFactory.decodeResource(getResources(),
+                R.drawable.explosion1);
+        this.explosion2 = BitmapFactory.decodeResource(getResources(),
+                R.drawable.explosion2);
+        this.explosion3 = BitmapFactory.decodeResource(getResources(),
+                R.drawable.explosion3);
+        this.explosion4 = BitmapFactory.decodeResource(getResources(),
+                R.drawable.explosion4);
+        this.explosion5 = BitmapFactory.decodeResource(getResources(),
+                R.drawable.explosion5);
 
-	public void setX(float x) {
-		this.x = x;
-	}
+    }
 
-	public float getY() {
-		return y;
-	}
+    public float getX() {
+        return x;
+    }
 
-	public void setY(float y) {
-		this.y = y;
-	}
-	public void explode(){
-			this.explosionCount++;
-	} 
+    public void setX(float x) {
+        this.x = x;
+    }
 
-	public Bitmap getExplosion1() {
-		return explosion1;
-	}
+    public float getY() {
+        return y;
+    }
 
-	public void setExplosion1(Bitmap explosion1) {
-		this.explosion1 = explosion1;
-	}
+    public void setY(float y) {
+        this.y = y;
+    }
 
-	public Bitmap getExplosion2() {
-		return explosion2;
-	}
+    public void explode() {
+        this.explosionCount++;
+    }
 
-	public void setExplosion2(Bitmap explosion2) {
-		this.explosion2 = explosion2;
-	}
+    public Bitmap getExplosion1() {
+        return explosion1;
+    }
 
-	public Bitmap getExplosion3() {
-		return explosion3;
-	}
+    public Bitmap getExplosion2() {
+        return explosion2;
+    }
 
-	public void setExplosion3(Bitmap explosion3) {
-		this.explosion3 = explosion3;
-	}
+    public Bitmap getExplosion3() {
+        return explosion3;
+    }
 
-	public Bitmap getExplosion4() {
-		return explosion4;
-	}
+    public Bitmap getExplosion4() {
+        return explosion4;
+    }
 
-	public void setExplosion4(Bitmap explosion4) {
-		this.explosion4 = explosion4;
-	}
-
-	public Bitmap getExplosion5() {
-		return explosion5;
-	}
-
-	public void setExplosion5(Bitmap explosion5) {
-		this.explosion5 = explosion5;
-	}
+    public Bitmap getExplosion5() {
+        return explosion5;
+    }
 
 
-	public int getExplosionCount() {
-		return explosionCount;
-	}
+    public int getExplosionCount() {
+        return explosionCount;
+    }
 
-
-	public void setExplosionCount(int explosionCount) {
-		this.explosionCount = explosionCount;
-	}
-	
-	
 
 }
